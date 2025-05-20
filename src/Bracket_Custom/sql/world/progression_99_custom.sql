@@ -131,8 +131,7 @@ INSERT INTO `creature_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `Q
     (25166, 40753, 0, 100, 0, 1, 0, 1, 1, 'Grand Warlock Alythess - Badge of Justice'),
     (25165, 40753, 0, 100, 0, 1, 0, 1, 1, 'Lady Sacrolash - Badge of Justice'),
     (25840, 40753, 0, 100, 0, 1, 0, 1, 1, 'Entropius - Badge of Justice'),
-    (25315, 40753, 0, 100, 0, 1, 0, 1, 1, 'Kil\'jaeden - Badge of Justice')
-);
+    (25315, 40753, 0, 100, 0, 1, 0, 1, 1, 'Kil\'jaeden - Badge of Justice');
 
 -- Drop emblems of heroism from TBC heroic dungeons bosses
 UPDATE creature_loot_template SET `Item` = 40752 WHERE `Item` IN (29434, 40752) AND Entry IN (
