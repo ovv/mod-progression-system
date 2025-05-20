@@ -1,4 +1,3 @@
-
 -- Allow all WOTLK dungeons
 DELETE FROM `disables` WHERE `entry` IN (
     632, -- The Forge of Souls
@@ -27,38 +26,83 @@ DELETE FROM dungeon_access_requirements WHERE dungeon_access_id IN (
     63 -- Caverns Of Time: Escape from Durnholde
 );
 
+
+-- Drop emblems of valor from TBH raid bosses
+DELETE FROM `creature_loot_template` WHERE `Item`=29434 AND `Entry` IN (
+    17225,
+    15690,
+    15688,
+    15689,
+    16524,
+    15691,
+    17533,
+    18168,
+    17521,
+    16457,
+    15687,
+    16152,
+    19044,
+    18831,
+    17257,
+    21216,
+    21217,
+    21215,
+    21214,
+    21213,
+    21212,
+    19514,
+    19622,
+    19516,
+    18805,
+    17767,
+    17808,
+    17888,
+    17842,
+    17968
+);
+INSERT INTO `creature_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+    (17257, 40753, 0, 100, 0, 1, 0, 3, 3, 'Magtheridon - Badge of Justice'),
+    (18831, 40753, 0, 100, 0, 1, 0, 2, 2, 'High King Maulgar - Badge of Justice'),
+    (19044, 40753, 0, 100, 0, 1, 0, 3, 3, 'Gruul - Badge of Justice'),
+    (16152, 40753, 0, 100, 0, 1, 0, 1, 1, 'Attumen the Huntsman - Badge of Justice'),
+    (15687, 40753, 0, 100, 0, 1, 0, 2, 2, 'Moroes - Badge of Justice'),
+    (16457, 40753, 0, 100, 0, 1, 0, 2, 2, 'Maiden of Virtue - Badge of Justice'),
+    (17521, 40753, 0, 100, 0, 1, 0, 2, 2, 'The Big Bad Wolf - Badge of Justice'),
+    (18168, 40753, 0, 100, 0, 1, 0, 2, 2, 'The Crone - Badge of Justice'),
+    (15691, 40753, 0, 100, 0, 1, 0, 2, 2, 'The Curator - Badge of Justice'),
+    (16524, 40753, 0, 100, 0, 1, 0, 2, 2, 'Shade of Aran - Badge of Justice'),
+    (15689, 40753, 0, 100, 0, 1, 0, 2, 2, 'Netherspite - Badge of Justice'),
+    (15688, 40753, 0, 100, 0, 1, 0, 2, 2, 'Terestian Illhoof - Badge of Justice'),
+    (15690, 40753, 0, 100, 0, 1, 0, 3, 3, 'Prince Malchezaar - Badge of Justice'),
+    (17225, 40753, 0, 100, 0, 1, 0, 2, 2, 'Nightbane - Badge of Justice'),
+    (17533, 40753, 0, 100, 0, 1, 0, 1, 1, 'Romulo - Badge of Justice'),
+    (21216, 40753, 0, 100, 0, 1, 0, 2, 2, 'Hydross - Badge of Justice'),
+    (21217, 40753, 0, 100, 0, 1, 0, 2, 2, 'The Lurker Below - Badge of Justice'),
+    (21215, 40753, 0, 100, 0, 1, 0, 2, 2, 'Leotheras - Badge of Justice'),
+    (21214, 40753, 0, 100, 0, 1, 0, 2, 2, 'Fathom-Lord Karathress - Badge of Justice'),
+    (21213, 40753, 0, 100, 0, 1, 0, 2, 2, 'Morogrim - Badge of Justice'),
+    (21212, 40753, 0, 100, 0, 1, 0, 2, 2, 'Lady Vashj - Badge of Justice'),
+    (19514, 40753, 0, 100, 0, 1, 0, 2, 2, 'Al\'ar - Badge of Justice'),
+    (19622, 40753, 0, 100, 0, 1, 0, 2, 2, 'Kael\'thas - Badge of Justice'),
+    (19516, 40753, 0, 100, 0, 1, 0, 2, 2, 'Void Reaver - Badge of Justice'),
+    (18805, 40753, 0, 100, 0, 1, 0, 2, 2, 'Solarian - Badge of Justice'),
+    (17767, 40753, 0, 100, 0, 1, 0, 2, 2, 'Rage Winterchill - Badge of Justice'),
+    (17808, 40753, 0, 100, 0, 1, 0, 2, 2, 'Anetheron - Badge of Justice'),
+    (17888, 40753, 0, 100, 0, 1, 0, 2, 2, 'Kaz\'rogal - Badge of Justice'),
+    (17842, 40753, 0, 100, 0, 1, 0, 2, 2, 'Azgalor - Badge of Justice'),
+    (17968, 40753, 0, 100, 0, 1, 0, 2, 2, 'Archimonde - Badge of Justice'
+);
+
+
 -- Drop emblems of heroism from TBH heroic dungeons bosses
 UPDATE creature_loot_template SET `Item` = 40752 WHERE `Item`=29434 AND Entry IN (
-    15687, -- Moroes
-    15688, -- Terestian Illhoof
-    15689, -- Netherspite
-    15690, -- Prince Malchezaar
-    15691, -- The Curator
-    16152, -- Attumen the Huntsman
-    16457, -- Maiden of Virtue
-    16524, -- Shade of Aran
-    17225, -- Nightbane
-    17257, -- Magtheridon
-    17521, -- The Big Bad Wolf
-    17533, -- Romulo
     17534, -- Julianne
-    17767, -- Rage Winterchill
-    17808, -- Anetheron
-    17842, -- Azgalor
-    17888, -- Kaz'rogal
-    17968, -- Archimonde
-    18168, -- The Crone
     18433, -- Omor the Unscarred
     18436, -- Watchkeeper Gargolmar
     18601, -- Broggok
     18607, -- Keli'dan the Breaker
     18621, -- The Maker
-    18805, -- Solarian
-    18831, -- High King Maulgar
     19044, -- Gruul the Dragonkiller
-    19514, -- Al'ar
-    19516, -- Void Reaver
-    19622, -- Kael'thas
     19893, -- Mennu the Betrayer
     19894, -- Quagmirran
     19895, -- Rokmar the Crackler
@@ -90,12 +134,6 @@ UPDATE creature_loot_template SET `Item` = 40752 WHERE `Item`=29434 AND Entry IN
     20738, -- Chrono Lord Deja
     20745, -- Temporus
     20923, -- Blood Guard Porung
-    21212, -- Lady Vashj
-    21213, -- Morogrim
-    21214, -- Fathom-Lord Karathress
-    21215, -- Leotheras
-    21216, -- Hydross
-    21217, -- The Lurker Below
     21533, -- Mechano-Lord Capacitus
     21536, -- Nethermancer Sepethrea
     21537, -- Pathaleon the Calculator
