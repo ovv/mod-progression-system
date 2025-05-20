@@ -26,9 +26,8 @@ DELETE FROM dungeon_access_requirements WHERE dungeon_access_id IN (
     63 -- Caverns Of Time: Escape from Durnholde
 );
 
-
--- Drop emblems of valor from TBH raid bosses
-DELETE FROM `creature_loot_template` WHERE `Item` IN (29434, 40753) AND `Entry` IN (
+-- Drop emblems of valor from TBC raid bosses
+DELETE FROM `creature_loot_template` WHERE `Item` IN (29434, 40752, 40753) AND `Entry` IN (
     17225,
     15690,
     15688,
@@ -58,51 +57,91 @@ DELETE FROM `creature_loot_template` WHERE `Item` IN (29434, 40753) AND `Entry` 
     17808,
     17888,
     17842,
-    17968
+    17968,
+    22887,
+    22898,
+    22841,
+    22871,
+    22948,
+    22947,
+    22917,
+    22950,
+    23574,
+    23576,
+    23578,
+    23577,
+    24239,
+    23863,
+    24892,
+    24882,
+    25038,
+    25166,
+    25165,
+    25840,
+    25315,
 );
 INSERT INTO `creature_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
-    (17257, 40753, 0, 100, 0, 1, 0, 3, 3, 'Magtheridon - Badge of Justice'),
-    (18831, 40753, 0, 100, 0, 1, 0, 2, 2, 'High King Maulgar - Badge of Justice'),
-    (19044, 40753, 0, 100, 0, 1, 0, 3, 3, 'Gruul - Badge of Justice'),
+    (17257, 40753, 0, 100, 0, 1, 0, 1, 1, 'Magtheridon - Badge of Justice'),
+    (18831, 40753, 0, 100, 0, 1, 0, 1, 1, 'High King Maulgar - Badge of Justice'),
+    (19044, 40753, 0, 100, 0, 1, 0, 1, 1, 'Gruul - Badge of Justice'),
     (16152, 40753, 0, 100, 0, 1, 0, 1, 1, 'Attumen the Huntsman - Badge of Justice'),
-    (15687, 40753, 0, 100, 0, 1, 0, 2, 2, 'Moroes - Badge of Justice'),
-    (16457, 40753, 0, 100, 0, 1, 0, 2, 2, 'Maiden of Virtue - Badge of Justice'),
-    (17521, 40753, 0, 100, 0, 1, 0, 2, 2, 'The Big Bad Wolf - Badge of Justice'),
-    (18168, 40753, 0, 100, 0, 1, 0, 2, 2, 'The Crone - Badge of Justice'),
-    (15691, 40753, 0, 100, 0, 1, 0, 2, 2, 'The Curator - Badge of Justice'),
-    (16524, 40753, 0, 100, 0, 1, 0, 2, 2, 'Shade of Aran - Badge of Justice'),
-    (15689, 40753, 0, 100, 0, 1, 0, 2, 2, 'Netherspite - Badge of Justice'),
-    (15688, 40753, 0, 100, 0, 1, 0, 2, 2, 'Terestian Illhoof - Badge of Justice'),
-    (15690, 40753, 0, 100, 0, 1, 0, 3, 3, 'Prince Malchezaar - Badge of Justice'),
-    (17225, 40753, 0, 100, 0, 1, 0, 2, 2, 'Nightbane - Badge of Justice'),
+    (15687, 40753, 0, 100, 0, 1, 0, 1, 1, 'Moroes - Badge of Justice'),
+    (16457, 40753, 0, 100, 0, 1, 0, 1, 1, 'Maiden of Virtue - Badge of Justice'),
+    (17521, 40753, 0, 100, 0, 1, 0, 1, 1, 'The Big Bad Wolf - Badge of Justice'),
+    (18168, 40753, 0, 100, 0, 1, 0, 1, 1, 'The Crone - Badge of Justice'),
+    (15691, 40753, 0, 100, 0, 1, 0, 1, 1, 'The Curator - Badge of Justice'),
+    (16524, 40753, 0, 100, 0, 1, 0, 1, 1, 'Shade of Aran - Badge of Justice'),
+    (15689, 40753, 0, 100, 0, 1, 0, 1, 1, 'Netherspite - Badge of Justice'),
+    (15688, 40753, 0, 100, 0, 1, 0, 1, 1, 'Terestian Illhoof - Badge of Justice'),
+    (15690, 40753, 0, 100, 0, 1, 0, 1, 1, 'Prince Malchezaar - Badge of Justice'),
+    (17225, 40753, 0, 100, 0, 1, 0, 1, 1, 'Nightbane - Badge of Justice'),
     (17533, 40753, 0, 100, 0, 1, 0, 1, 1, 'Romulo - Badge of Justice'),
-    (21216, 40753, 0, 100, 0, 1, 0, 2, 2, 'Hydross - Badge of Justice'),
-    (21217, 40753, 0, 100, 0, 1, 0, 2, 2, 'The Lurker Below - Badge of Justice'),
-    (21215, 40753, 0, 100, 0, 1, 0, 2, 2, 'Leotheras - Badge of Justice'),
-    (21214, 40753, 0, 100, 0, 1, 0, 2, 2, 'Fathom-Lord Karathress - Badge of Justice'),
-    (21213, 40753, 0, 100, 0, 1, 0, 2, 2, 'Morogrim - Badge of Justice'),
-    (21212, 40753, 0, 100, 0, 1, 0, 2, 2, 'Lady Vashj - Badge of Justice'),
-    (19514, 40753, 0, 100, 0, 1, 0, 2, 2, 'Al\'ar - Badge of Justice'),
-    (19622, 40753, 0, 100, 0, 1, 0, 2, 2, 'Kael\'thas - Badge of Justice'),
-    (19516, 40753, 0, 100, 0, 1, 0, 2, 2, 'Void Reaver - Badge of Justice'),
-    (18805, 40753, 0, 100, 0, 1, 0, 2, 2, 'Solarian - Badge of Justice'),
-    (17767, 40753, 0, 100, 0, 1, 0, 2, 2, 'Rage Winterchill - Badge of Justice'),
-    (17808, 40753, 0, 100, 0, 1, 0, 2, 2, 'Anetheron - Badge of Justice'),
-    (17888, 40753, 0, 100, 0, 1, 0, 2, 2, 'Kaz\'rogal - Badge of Justice'),
-    (17842, 40753, 0, 100, 0, 1, 0, 2, 2, 'Azgalor - Badge of Justice'),
-    (17968, 40753, 0, 100, 0, 1, 0, 2, 2, 'Archimonde - Badge of Justice'
+    (21216, 40753, 0, 100, 0, 1, 0, 1, 1, 'Hydross - Badge of Justice'),
+    (21217, 40753, 0, 100, 0, 1, 0, 1, 1, 'The Lurker Below - Badge of Justice'),
+    (21215, 40753, 0, 100, 0, 1, 0, 1, 1, 'Leotheras - Badge of Justice'),
+    (21214, 40753, 0, 100, 0, 1, 0, 1, 1, 'Fathom-Lord Karathress - Badge of Justice'),
+    (21213, 40753, 0, 100, 0, 1, 0, 1, 1, 'Morogrim - Badge of Justice'),
+    (21212, 40753, 0, 100, 0, 1, 0, 1, 1, 'Lady Vashj - Badge of Justice'),
+    (19514, 40753, 0, 100, 0, 1, 0, 1, 1, 'Al\'ar - Badge of Justice'),
+    (19622, 40753, 0, 100, 0, 1, 0, 1, 1, 'Kael\'thas - Badge of Justice'),
+    (19516, 40753, 0, 100, 0, 1, 0, 1, 1, 'Void Reaver - Badge of Justice'),
+    (18805, 40753, 0, 100, 0, 1, 0, 1, 1, 'Solarian - Badge of Justice'),
+    (17767, 40753, 0, 100, 0, 1, 0, 1, 1, 'Rage Winterchill - Badge of Justice'),
+    (17808, 40753, 0, 100, 0, 1, 0, 1, 1, 'Anetheron - Badge of Justice'),
+    (17888, 40753, 0, 100, 0, 1, 0, 1, 1, 'Kaz\'rogal - Badge of Justice'),
+    (17842, 40753, 0, 100, 0, 1, 0, 1, 1, 'Azgalor - Badge of Justice'),
+    (17968, 40753, 0, 100, 0, 1, 0, 1, 1, 'Archimonde - Badge of Justice'),
+    (22887, 40753, 0, 100, 0, 1, 0, 1, 1, 'High Warlord Naj\'entus - Badge of Justice'),
+    (22898, 40753, 0, 100, 0, 1, 0, 1, 1, 'Supremus - Badge of Justice'),
+    (22841, 40753, 0, 100, 0, 1, 0, 1, 1, 'Shade of Akama - Badge of Justice'),
+    (22871, 40753, 0, 100, 0, 1, 0, 1, 1, 'Teron Gorefiend - Badge of Justice'),
+    (22948, 40753, 0, 100, 0, 1, 0, 1, 1, 'Gurtogg Bloodboil - Badge of Justice'),
+    (22947, 40753, 0, 100, 0, 1, 0, 1, 1, 'Mother Shahraz - Badge of Justice'),
+    (22917, 40753, 0, 100, 0, 1, 0, 1, 1, 'Illidan Stormrage - Badge of Justice'),
+    (22950, 40753, 0, 100, 0, 1, 0, 1, 1, 'High Nethermancer Zerevor - Badge of Justice'),
+    (23574, 40753, 0, 100, 0, 1, 0, 1, 1, 'Akil\'zon - Badge of Justice'),
+    (23576, 40753, 0, 100, 0, 1, 0, 1, 1, 'Nalorakk - Badge of Justice'),
+    (23578, 40753, 0, 100, 0, 1, 0, 1, 1, 'Jan\'alai - Badge of Justice'),
+    (23577, 40753, 0, 100, 0, 1, 0, 1, 1, 'Halazzi - Badge of Justice'),
+    (24239, 40753, 0, 100, 0, 1, 0, 1, 1, 'Hex Lord Malacrass - Badge of Justice'),
+    (23863, 40753, 0, 100, 0, 1, 0, 1, 1, 'Zul\'jin - Badge of Justice'),
+    (24892, 40753, 0, 100, 0, 1, 0, 1, 1, 'Sathrovarr the Corruptor - Badge of Justice'),
+    (24882, 40753, 0, 100, 0, 1, 0, 1, 1, 'Brutallus - Badge of Justice'),
+    (25038, 40753, 0, 100, 0, 1, 0, 1, 1, 'Felmyst - Badge of Justice'),
+    (25166, 40753, 0, 100, 0, 1, 0, 1, 1, 'Grand Warlock Alythess - Badge of Justice'),
+    (25165, 40753, 0, 100, 0, 1, 0, 1, 1, 'Lady Sacrolash - Badge of Justice'),
+    (25840, 40753, 0, 100, 0, 1, 0, 1, 1, 'Entropius - Badge of Justice'),
+    (25315, 40753, 0, 100, 0, 1, 0, 1, 1, 'Kil\'jaeden - Badge of Justice')
 );
 
-
--- Drop emblems of heroism from TBH heroic dungeons bosses
-UPDATE creature_loot_template SET `Item` = 40752 WHERE `Item`=29434 AND Entry IN (
+-- Drop emblems of heroism from TBC heroic dungeons bosses
+UPDATE creature_loot_template SET `Item` = 40752 WHERE `Item` IN (29434, 40752) AND Entry IN (
     17534, -- Julianne
     18433, -- Omor the Unscarred
     18436, -- Watchkeeper Gargolmar
     18601, -- Broggok
     18607, -- Keli'dan the Breaker
     18621, -- The Maker
-    19044, -- Gruul the Dragonkiller
     19893, -- Mennu the Betrayer
     19894, -- Quagmirran
     19895, -- Rokmar the Crackler
@@ -146,33 +185,12 @@ UPDATE creature_loot_template SET `Item` = 40752 WHERE `Item`=29434 AND Entry IN
     21601, -- Harbinger Skyriss
     21624, -- Wrath-Scryer Soccothrates
     21626, -- Zereketh the Unbound
-    22841, -- Shade of Akama
-    22871, -- Teron Gorefiend
-    22887, -- High Warlord Naj'entus
-    22898, -- Supremus
-    22917, -- Illidan Stormrage
     22930, -- Yor
-    22947, -- Mother Shahraz
-    22948, -- Gurtogg Bloodboil
-    22950, -- High Nethermancer Zerevor
     23035, -- Anzu
     23420, -- Essence of Anger
-    23574, -- Akil'zon
-    23576, -- Nalorakk
-    23577, -- Halazzi
-    23578, -- Jan'alai
-    23863, -- Zul'jin
-    24239, -- Hex Lord Malacrass
     24857, -- Kael'thas Sunstrider
-    24882, -- Brutallus
-    24892, -- Sathrovarr the Corruptor
-    25038, -- Felmyst
-    25165, -- Lady Sacrolash
-    25166, -- Grand Warlock Alythess
-    25315, -- Kil'jaeden
     25560, -- Priestess Delrissa
     25562, -- Selin Fireheart
     25573, -- Vexallus
-    25840, -- Entropius
     28194 -- Prince Tenris Mirkblood
 );
