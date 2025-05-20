@@ -78,7 +78,7 @@ DELETE FROM `creature_loot_template` WHERE `Item` IN (29434, 40752, 40753) AND `
     25166,
     25165,
     25840,
-    25315,
+    25315
 );
 INSERT INTO `creature_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
     (17257, 40753, 0, 100, 0, 1, 0, 1, 1, 'Magtheridon - Badge of Justice'),
