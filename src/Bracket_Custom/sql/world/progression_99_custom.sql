@@ -28,7 +28,7 @@ DELETE FROM dungeon_access_requirements WHERE dungeon_access_id IN (
 
 
 -- Drop emblems of valor from TBH raid bosses
-DELETE FROM `creature_loot_template` WHERE `Item`=29434 AND `Entry` IN (
+DELETE FROM `creature_loot_template` WHERE `Item` IN (29434, 40753) AND `Entry` IN (
     17225,
     15690,
     15688,
