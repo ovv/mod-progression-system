@@ -10,7 +10,7 @@ UPDATE `quest_template` SET `RewardItem1` = 40752 WHERE `ID` IN (24789, 24790);
 
 -- Make heroic dungeon boss drop emblems of heroism
 UPDATE `creature_loot_template` SET `Item` = 40752 WHERE `Item` = 47241 AND `Entry` IN (
-    31558, 31559, 31560, -- The oculus TODO: Cache of Eregos
+    31558, 31559, 31560, -- The oculus
     30510, 30529, 30532, 30540, 30397, 30398, -- The Nexus
     31456, 31469, 31465, 31464, 31463, -- Ahn'kahet: The Old Kingdom
     31612, 31611, 31610, -- Azjol-Nerub

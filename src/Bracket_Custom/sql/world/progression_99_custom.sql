@@ -1,3 +1,7 @@
+-- Emblem of heroism = 40752
+-- Emblem of valor = 40753
+-- Emblem of triumph = 47241
+
 -- Allow all WOTLK dungeons
 DELETE FROM `disables` WHERE `entry` IN (
     632, -- The Forge of Souls
@@ -6,6 +10,21 @@ DELETE FROM `disables` WHERE `entry` IN (
     668 -- Halls of Reflection
 );
 
+-- Make trial of the champion and ICC dungeon boss drop emblems of heroism
+UPDATE `creature_loot_template` SET `Item` = 40752 WHERE `Item` = 47241 AND `Entry` IN (
+    35490, -- Trial of the Champion heroic
+    36497, 36502, -- The forge of souls
+    36498, 37677, -- The forge of souls heroic
+    36494, 36476, 36658, -- Pit of Saron
+    37613, 37627, 36938, -- Pit of Saron heroic
+    38112, 38113, -- Halls of Reflection
+    38599, 38603 -- Halls of Reflection heroic
+);
+
+UPDATE `gameobject_loot_template` SET `Item` = 40752 WHERE `Item` = 47241 AND `Entry` IN (
+    27414, -- Trial of the Champion heroic:  Champion's Cache
+    27416 -- Trial of the Champion heroic:  Eadric's Cache
+);
 
 -- Disable attunments for TBC heroic dungeons
 DELETE FROM dungeon_access_requirements WHERE dungeon_access_id IN (
