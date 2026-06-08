@@ -14,3 +14,13 @@ UPDATE `creature_template` SET `npcflag` = `npcflag` &~4096 WHERE `entry` IN (12
 
 -- remove 60+ items from <Accessories Quartermaster> (12781, 12793)
 DELETE FROM `npc_vendor` WHERE (`entry` IN (12781, 12793)) AND (`item` >= 20000) AND (`item` NOT IN (29592, 29593));
+
+-- Disable Wrath of the Lich King (frost/triumph/conquest) emblem vendors
+UPDATE `creature_template` SET `npcflag` = `npcflag` &~128 WHERE `entry` IN (
+    33964, -- conquest Horde
+    33963, -- conquest Alliance
+    35495, 35574, 35578, 35580, -- triumph Horde
+    35494, 35573, 35577, 35579, -- triumph Alliance
+    37941, -- frost Horde
+    37942 -- frost Alliance
+);
