@@ -1,9 +1,5 @@
 !.gitignore
 
-# Custom changes
-/src/Bracket_Custom/sql/world/
-**/*[Cc]ustom*.sql
-
 #
 #Generic
 #
